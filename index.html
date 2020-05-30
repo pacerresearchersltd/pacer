@@ -1,257 +1,293 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
-  <title>PACER Researchers Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
-
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
   <!-- Bootstrap Scripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
 
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+  </style>
+</head>
 <body>
 
-  <section class="colored-section" id="title">
-
-    <div class="container-fluid">
-
-      <!-- Nav Bar -->
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-
-        <a class="navbar-brand" href=""><img src="images/logo1.jpg" alt="pacer"></a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-          <ul class="navbar-nav ml-auto">
-            <li clas="nav-item">
-              <a class="nav-link" href="">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#features">Consultancy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#features">Training</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#features">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#features">Internet Cafe</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#footer">Contact</a>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img  class="logo" src="images/logo1.jpg" alt=""></a>
 
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
 
-  </section>
-  <!-- Testimonials -->
-
-  <section class="colored-section" id="testimonials">
-
-    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active container-fluid">
-          <h2 class="testimonial-text">We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243. we offer services in Printery, Research, Internet cafe, etc..</h2>
-          <img class="testimonial-image" src="images/manager.jpg" alt="Manager">
-          <em>operational Manager</em>
-        </div>
-        <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243. we offer services in Printery, Research, Internet cafe, etc.</h2>
-          <img class="testimonial-image" src="images/ben.jpg" alt="graphic-designer">
-          <em>graphic Designer</em>
-        </div </div>
-        <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243. we offer services in Printery, Research, Internet cafe, etc.</h2>
-          <img class="testimonial-image" src="images/vic.jpg" alt="graphic-designer">
-          <em>Senior graphic Designer</em>
-        </div>
-        <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243. we offer services in Printery, Research, Internet cafe, etc.</h2>
-          <img class="testimonial-image" src="images/staff.jpg" alt="staff-member">
-          <em>staff member</em>
-        </div>
-        <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243. we offer services in Printery, Research, Internet cafe, etc.</h2>
-          <img class="testimonial-image" src="images/print.png" alt="Photographer">
-          <em>Photographer</em>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img  class="item"src="images/ben.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Sell $</h3>
+          <p>Money Money.</p>
         </div>
       </div>
 
+      <div class="item">
+        <img class="item" src="images/manager.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>More Sell $</h3>
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
+      <div class="item">
+        <img class="item" src="images/co.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h3>More Sell $</h3>
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
     </div>
-    <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
     </a>
-    </div>
-
-  </section>
-  <section class="white-section" id="pricing">
-
-    <p>We as PACER Researchers LTD , we are a registered Company with Reg NO:185637, TIN: 1009803243.
-      we offer services in Printery, Research, Internet cafe, etc.</p>
-
-
-    <div class="row">
-      <div class="border pricing-column col-lg-4 col-md-6">
-        <img class="title-image" src="images/manager.jpg" alt="iphone-mockup">
-        <button type="button" class="btn btn-warning btn-block">our operational manager giving welcome <br />speach to the new interns</button>
-      </div>
-
-      <div class="border pricing-column col-lg-4 col-md-6">
-        <img class="rounded title-image" src="images/bizhub.jpg" alt="iphone-mockup"><br />
-        <p>We offer the best quality prinitng services in the country</p>
-        <button type="button" class="btn btn-warning btn-block">We offer the best prinitng services <br />in town</button>
-      </div>
-
-      <div class="border pricing-column col-lg-4 ">
-        <img class="rounded title-image" src="images/2.jpg" alt="iphone-mockup">
-        <button type="button" class="btn btn-warning btn-block">We offer the best in town Internet service</button>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="white-section" id="pricing">
-
-    <div class="row">
-
-      <div class="border pricing-column col-lg-4 col-md-6">
-        <img class="title-image" src="images/print.jpg" alt="iphone-mockup">
-        <p> <button type="button" class="btn btn-warning  btn-block">We offer the best photograph in town</button> </p>
-
-
-      </div>
-      <div class="border pricing-column col-lg-4 col-md-6">
-        <img class="title-image" src="images/1.jpg" alt="iphone-mockup">
-        <p> <button type="button" class="btn btn-warning btn-block">We offer the best photograph in town</button> </p>
-
-      </div>
-      <div class="border pricing-column col-lg-4">
-        <img class="title-image" src="images/co.jpg" alt="iphone-mockup">
-        <p> <button type="button" class="btn btn-warning btn-block">We offer the best photograph in town</button> </p>
-
-
-      </div>
-
-
+</div>
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
 
     </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
 
-  </section>
-  <!-- Press -->
+          <img src="images/bizhub.jpg" alt="Lights" style="width:100%">
 
-  <section class="white-section" id="pricing">
+          <div class="caption">
+            <h1>Printery Services</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
 
-    <div class="row">
 
-      <div class="border pricing-column col-md-6">
-
-
-        <img class="rounded title-image" src="images/print.jpg" alt="iphone-mockup"><br />
-        <button type="button" class="btn btn-warning btn-block">We offer the best prinitng services <br />in town</button>
+          </div>
+        </a>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
 
-      <div class="border pricing-column col-md-6 ">
-        <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min. we off
-          all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min. we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min</p>
-
-
+          <img src="images/manager.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <h1>operations Manager</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
+          </div>
+        </a>
       </div>
     </div>
 
-  </section>
-
-  <!-- Press -->
-
-  <section class="white-section" id="pricing">
-
-    <div class="row">
-
-
-      <div class="border pricing-column col-lg-6 ">
-        <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min. we off
-          all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min. we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min</p>
-
-
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <marquee behavior="scroll" direction="up" height="250"
+           scrollamount="2" scrolldelay="10">
+          We deisgn all sort of design at at Pocket friendly price.
+          deisgn all sort of design at at Pocket friendly price deisgn all
+           sort of design at at Pocket friendly price
+        </marquee>
       </div>
-      <div class="border pricing-column col-lg-6">
+      <div class="well">
+      <h3>upcoming events</h3>
+      <marquee behavior="scroll" direction="up" height="250"
+         scrollamount="2" scrolldelay="10">
+        We deisgn all sort of design at at Pocket friendly price.
+        deisgn all sort of design at at Pocket friendly price deisgn all
+         sort of design at at Pocket friendly price
+      </marquee>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+
+          <img src="images/co.jpg" alt="Lights" style="width:100%">
+
+          <div class="caption">
+            <h1>Printery Services</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
 
 
-        <img class="rounded title-image" src="images/print.jpg" alt="iphone-mockup"><br />
-        <button type="button" class="btn btn-warning btn-block">We offer the best prinitng services <br />in town</button>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+
+          <img src="images/2.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <h1>operations Manager</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
+          </div>
+        </a>
       </div>
     </div>
 
-  </section>
-  <!--- middle section --->
-  <section class="white-section" id="pricing">
-
-
-
-    <div class="row">
-
-      <div class="pricing-column col-lg-4 col-md-6">
-
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <marquee behavior="scroll" direction="up" height="250"
+           scrollamount="2" scrolldelay="10">
+          We deisgn all sort of design at at Pocket friendly price.
+          deisgn all sort of design at at Pocket friendly price deisgn all
+           sort of design at at Pocket friendly price
+        </marquee>
       </div>
-
-      <div class="pricing-column col-lg-4 col-md-6">
-
+      <div class="well">
+        <marquee behavior="scroll" direction="up" height="250"
+           scrollamount="2" scrolldelay="10">
+          We deisgn all sort of design at at Pocket friendly price.
+          deisgn all sort of design at at Pocket friendly price deisgn all
+           sort of design at at Pocket friendly price
+        </marquee>
       </div>
-
-      <div class="pricing-column col-lg-4">
-
-      </div>
-
-
+    </div>
+  </div>
+</div><div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
 
     </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
 
-  </section>
-  <!-- Footer -->
+          <img src="images/co.jpg" alt="Lights" style="width:100%">
 
-  <footer class="bg-dark" id="footer">
-    <div class="container-fluid">
-      <a href="https://www.facebook.com/pacerresearchersltd/"> <i class="social-icon fab fa-facebook-f"></i></a>
-      <a class="footer-link" href="https://twitter.com/"><i class="social-icon fab fa-twitter"></i></a>
-      <a class="footer-link" href="https://www.instagram.com/accounts/login/?hl=en"><i class="social-icon fab fa-instagram"></i></a>
-      <a href="mailto:pacerresearchers@email.com"><i class="social-icon fas fa-envelope"></i></a>
+          <div class="caption">
+            <h1>Printery Services</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
 
+
+          </div>
+        </a>
+      </div>
     </div>
-    <div>
-      <a href=""> <i class="fas fa-phone-volume"></i>+256 786 295 366 </a><br />
-      <a href=""> <i class="fas fa-phone-volume"></i>+256 787 471 354 </a><br>
-      <a href=""> <i class="fas fa-phone-volume"></i> +256 755 393 575</a><br>
-      <a href="#">© Copyright 2020 Pacer Researchers ltd</a>
+    <div class="col-md-4">
+      <div class="thumbnail">
 
+          <img src="images/print.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <h1>operations Manager</h1>
+            <p>we off all type of Photographer ie campaipgn poster, still photos, photo editing, flies, passport
+              delivered in 1min we off all type of Photographer
+              ie campaipgn poster, still photos, photo editing, flies, passport delivered in 1min.....<button type="button" class="btn btn-sm btn-danger">Read More</button></p>
+          </div>
+        </a>
+      </div>
     </div>
-  </footer>
+
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
 </body>
-
-
 </html>
